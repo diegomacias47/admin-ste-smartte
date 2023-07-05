@@ -1,28 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/home/home';
+import { Login } from './pages/login/login';
+import { useEffect } from 'react';
+import { SteContextComponent } from './context/steContextComponent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  useEffect(() => {
+    /*const loggedUserToken = window.localStorage.getItem('loggedUserToken');
+    if (loggedUserToken) {
+      console.log(decoded(loggedUserToken));
+    }*/
+  }, []);
 
-          <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </div>
+  return (
+    <SteContextComponent>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Login></Login>}></Route>
+          <Route path='/home' element={<Home></Home>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </SteContextComponent>
   );
 }
 
