@@ -1,14 +1,15 @@
 import jwtDecode from "jwt-decode";
 
-export const saveTokenInLocalStorage = (token) => {
+export const saveToken = (token) => {
     if (!token) {
-        return;
+        return 0;
     }
 
     window.localStorage.setItem('loggedUserToken', JSON.stringify(token));
+    return 1;
 };
 
-export const decoded = (token) => {
+export const decodeToken = (token) => {
     return jwtDecode(token);
 };
 
@@ -20,4 +21,8 @@ export const getToken = () => {
     }
 
     return null;
+}
+
+export const removeToken = () => {
+    window.localStorage.removeItem('loggedUserToken');
 }
