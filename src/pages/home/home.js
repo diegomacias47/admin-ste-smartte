@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 export const Home = () => {
     const { userData } = useContext(STEContext);
     return (
-        <div>
+        <div className="">
             <h1>Home {userData}</h1>
         </div>
     );

@@ -19,7 +19,7 @@ export const SteContextComponent = ({ children }) => {
 
     return (
         <STEContext.Provider
-            value={{userToken, loadUserToken, getUserToken}}
+            value={{userToken, loadUserToken, getUserToken, removeUserToken}}
         >
             { children }
         </STEContext.Provider>

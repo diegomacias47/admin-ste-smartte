@@ -5,11 +5,13 @@ import { getToken } from '../services/auth';
 import { useEffect } from 'react';
 export const PublicRoute = ({children, redirectTo = '/home'}) => {
     const { userToken, loadUserToken } = useContext(STEContext);
-    const token = getToken();
 
     useEffect(() => {
-        loadUserToken(token);
-    }, [userToken]);
+        const token = getToken();
+        if (token) {
+            loadUserToken(token);
+        }
+    }, [userToken, loadUserToken]);
 
     if (userToken) {
         return <Navigate to={redirectTo}/>;
