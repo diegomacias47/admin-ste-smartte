@@ -1,0 +1,51 @@
+.btn {
+    @apply font-poppins rounded-lg px-4 py-1.5;
+}
+
+.btn-md {
+    @apply text-sm;
+}
+
+.btn-lg {
+    @apply text-base;
+}
+
+.btn-primary {
+    @apply transition-colors ease-in-out duration-300 bg-blue-ste text-white drop-shadow-xl font-bold;
+}
+
+.btn-primary:hover {
+    @apply transition-colors ease-in-out duration-300 bg-lightblue-100;
+}
+
+.btn-secondary {
+    @apply transition-colors ease-in-out duration-300 bg-yellow-500 text-gray-900 font-bold shadow-lg;
+}
+
+.btn-secondary:hover {
+    @apply transition-colors ease-in-out duration-300 bg-yellow-600;
+}
+
+.btn-text {
+    @apply transition-colors ease-in-out duration-300 text-blue-ste;
+}
+
+.btn-text:hover {
+    @apply transition-colors ease-in-out duration-300 bg-lightblue-50;
+}
+
+.poppins-bold {
+    @apply font-poppins font-bold;
+}
+
+.custom-input {
+    @apply bg-gray-50 appearance-none border-2 border-gray-200 rounded rounded-e-none w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-sky-500; /*bg-white border border-sky-400 rounded-lg px-2 py-1 drop-shadow-xl outline-sky-400;*/
+}
+
+.custom-input:focus {
+
+}
+
+.custom-select {
+    @apply bg-gray-50 appearance-none border-2 border-gray-200 rounded text-start rounded-e-none w-full py-2 px-4 text-sky-400 leading-tight focus:outline-none focus:border-sky-500;
+}

@@ -1,6 +1,8 @@
 import { Card, Typography } from "@material-tailwind/react";
+import {useFetch} from '../services/useFetch';
+
 export const CustomTable = () => {
-    const TABLE_HEAD = ["Name", "Job", "Employed", ""];
+    const TABLE_HEAD = ["Id", "Matricula", "Nombres", "Apellidos"];
  
     const TABLE_ROWS = [
     {
@@ -29,7 +31,11 @@ export const CustomTable = () => {
         date: "04/10/21",
     },
     ];
+
+    //const {data, loading, error} = useFetch('students');
+
     return (
+        /*
         <Card className="overflow-scroll h-full w-full">
             <table className="w-full min-w-max table-auto text-left">
                 <thead>
@@ -48,7 +54,7 @@ export const CustomTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {TABLE_ROWS.map(({ name, job, date }, index) => {
+                    {data.map(({id_student, student_mat, student_name, student_last_name }, index) => {
                         const isLast = index === TABLE_ROWS.length - 1;
                         const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
 
@@ -80,5 +86,6 @@ export const CustomTable = () => {
                 </tbody>
             </table>
         </Card>
+        */<div>Holaa</div>
     );
 }
